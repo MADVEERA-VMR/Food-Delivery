@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-nav" href="javascript:void(0)">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/master" routerLinkActive="active">Master</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/client" routerLinkActive="active">Client</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/client-project" routerLinkActive="active">Client Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/restaurant-listing" routerLinkActive="active">Food Order</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto"> <!-- Add ms-auto here -->
+                <img src="assets/avatar-pics/avatar.jpg" alt="User Avatar" class="small-avatar">
+                <li class="nav-item">                    
+                    <h1 class="nav-link">Hey {{ username }}</h1>
+                </li>
+            </ul>
+            <form class="d-flex">
+       
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container pt-2">
+    <router-outlet></router-outlet>
+</div>
