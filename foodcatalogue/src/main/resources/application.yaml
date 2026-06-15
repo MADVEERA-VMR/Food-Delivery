@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: FOOD-CATALOGUE-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3307/foodcataloguedb
+    username: root
+    password: fj68JGI2!qp79.,
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 9092
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+clients:
+  restaurant:
+    fetch-by-id-url: http://RESTAURANT-SERVICE:9091/restaurant/fetchById/
+
