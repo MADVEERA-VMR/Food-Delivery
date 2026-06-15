@@ -1,0 +1,17 @@
+server:
+  port: 8761
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
